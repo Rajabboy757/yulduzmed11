@@ -1,0 +1,61 @@
+ <!-- Appointment Start -->
+ {% load static %}
+    <div class="container-fluid bg-primary my-5 py-5" id="appointment" style=" background-color: #ff0000 !important;">
+        <div class="container py-5">
+            <div class="row gx-5">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <div class="mb-4">
+{#                        <h5 class="d-inline-block text-white text-uppercase border-bottom border-5">Appointment</h5>#}
+                        <h1 class="display-4"  style="    color: #ffffff;">Доктор қабулига ёзилиш учун формани тўлдиринг!</h1>
+                    </div>
+                    <p class="text-white mb-5">Биз сиз билан қайта боғланамиз! <br> <br>Мутахассислар - клиника сифатининг асосий кўрсаткичи! <br><br> «Yulduz Med Service» - Саломатлигингиз ишончли қўлларда!</p>
+{#                    <a class="btn btn-dark rounded-pill py-3 px-5 me-3" href="">Find Doctor</a>#}
+{#                    <a class="btn btn-outline-dark rounded-pill py-3 px-5" href="">Read More</a>#}
+                    <p class="mb-md-0"><a class="fa fa-phone-alt text-primary me-3" href="tel:+998937400000"> 93 - 740 0000 | 93 - 750 0000 </a></p>
+
+                </div>
+                <div class="col-lg-6">
+                    <div class="bg-white text-center rounded p-5">
+                        <h1 class="mb-4" style="font-size: 16px ">Тузатиш ишлари кетмоқда! (ушбу форма вақтинча ишламайди)</h1>
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-12">
+                                    <select class="form-select bg-light border-0" style="height: 55px;">
+                                        <option selected>Шифокорлар... </option>
+                                        <option value="1">Флеболог || Абдуллаев Беҳзод Пулатович</option>
+                                        <option value="2">Невролог || Йўлдошева Нигора Бохадировна</option>
+                                        <option value="3">Уролог || Атаханов Мурод Матяқубович</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <input type="text" class="form-control bg-light border-0" placeholder="Исмингиз" style="height: 55px;">
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <input type="email" class="form-control bg-light border-0" placeholder="Телефон рақамингиз" style="height: 55px;">
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <div class="date" id="date" data-target-input="nearest">
+                                        <input type="text"
+                                            class="form-control bg-light border-0 datetimepicker-input"
+                                            placeholder="Сана" data-target="#date" data-toggle="datetimepicker" style="height: 55px;">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <div class="time" id="time" data-target-input="nearest">
+                                        <input type="text"
+                                            class="form-control bg-light border-0 datetimepicker-input"
+                                            placeholder="Вақт" data-target="#time" data-toggle="datetimepicker" style="height: 55px;">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-primary w-100 py-3" style="    background-color: #3e8b00;
+    border-color: #3e8b00;" type="submit">Юбориш</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Appointment End -->
