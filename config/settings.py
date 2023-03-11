@@ -112,8 +112,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/img/'
-# STATICFILES_DIRS = [str(BASE_DIR) + '/assets', ]
-# STATIC_ROOT = '/home/yulduzme/yulduz-med.uz/django/yulduzmed/static'
+STATICFILES_DIRS = str(BASE_DIR) + '/static',
+# STATIC_ROOT = str(BASE_DIR) + '/static'
 # MEDIA_ROOT = '/home/yulduzme/yulduz-med.uz/django/yulduzmed/media'
 
 # STATIC_ROOT = BASE_DIR / 'staticfiles'

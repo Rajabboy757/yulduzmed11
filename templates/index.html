@@ -2,7 +2,6 @@
 
 {% block content %}
     {% include 'includes/hero.html' %}
-    {% NewsListView.as_view()(request) %}
     {% include 'includes/news.html' %}
     {% include 'includes/service.html' %}
     {% include 'includes/team.html' %}
@@ -10,6 +9,7 @@
     {% include 'includes/testimonial.html' %}
     {% include 'includes/appointment.html' %}
     {% include 'includes/contact.html' %}
+    {% include 'includes/footer.html' %}
 
 {% endblock content %}
 

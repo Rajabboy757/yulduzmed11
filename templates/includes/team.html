@@ -8,64 +8,32 @@
             <h5 style="color: #dd1313;">Мутахассислар - клиника сифатининг асосий кўрсаткичи!</h5>
         </div>
         <div class="owl-carousel team-carousel position-relative">
-            <div class="team-item">
-                <div class="row g-0 bg-light rounded overflow-hidden">
-                    <div class="col-12 col-sm-5 h-100">
-                        <img class="img-fluid h-100" src="{% static 'img/murod.jpg' %}" style="object-fit: cover;">
-                    </div>
-                    <div class="col-12 col-sm-7 h-100 d-flex flex-column">
-                        <div class="mt-auto p-4">
-                            <h3 style="color: #ff0000;">Атаханов Мурод Матяқубович</h3>
-                            <h6 style="color: #ff0000;" class="fw-normal mb-4">Бош шифокоримиз, Уролог</h6>
-                            <p class="m-0">Урология йўналиши бўйича кўп йиллик тажрибага эга мутахассис (шифокор)</p>
-                        </div>
-                        <div class="d-flex mt-auto border-top p-4">
-                            <a href="#appointment" style="color: #ffffff; background: #ff0000;"
-                               class="btn btn-outline-light rounded-pill py-md-3 px-md-5 mx-2">Мурожаат учун</a>
-                        </div>
 
-                    </div>
-                </div>
-            </div>
-            <div class="team-item">
-                <div class="row g-0 bg-light rounded overflow-hidden">
-                    <div class="col-12 col-sm-5 h-100">
-                        <img class="img-fluid h-100" src="{% static 'img/nigora.jpg' %}" style="object-fit: cover;">
-                    </div>
-                    <div class="col-12 col-sm-7 h-100 d-flex flex-column">
-                        <div class="mt-auto p-4">
-                            <h3 style="color: #ff0000;">Йўлдошева Нигора Бохадировна</h3>
-                            <h6 style="color: #ff0000;" class="fw-normal mb-4">Олий тоифали невролог</h6>
-                            <p class="m-0">Танадаги оғриқлар сабабини билмаяпсизми? Олий тоифали неврологимиздан жавоб
-                                оласиз!</p>
+
+            {% for doctor in doctors %}
+
+                <div class="team-item">
+
+                    <div class="row g-0 bg-light rounded overflow-hidden">
+                        <div class="col-12 col-sm-5 h-100">
+                            <img class="img-fluid h-100" src="{% static doctor.image.url %}" style="object-fit: cover;">
                         </div>
-                        <div class="d-flex mt-auto border-top p-4">
-                            <a href="#appointment" style="color: #ffffff; background: #ff0000;"
-                               class="btn btn-outline-light rounded-pill py-md-3 px-md-5 mx-2">Мурожаат учун</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="team-item">
-                <div class="row g-0 bg-light rounded overflow-hidden">
-                    <div class="col-12 col-sm-5 h-100">
-                        <img class="img-fluid h-100" src="{% static 'img/bekzod.jpg' %}" style="object-fit: cover;">
-                    </div>
-                    <div class="col-12 col-sm-7 h-100 d-flex flex-column">
-                        <div class="mt-auto p-4">
-                            <h3 style="color: #ff0000;">Абдуллаев Беҳзод Пулатович </h3>
-                            <h6 style="color: #ff0000;" class="fw-normal  mb-4">Қон томир жаррохи, флеболог</h6>
-                            <p style="font-size: x-small" class="m-0">Қон томир хирургияси ва флебология йўналиши бўйича
-                                кўп йиллик тажрибага эга мутахассис (шифокор). Россия флебологлар ассоциацияси(АФР) ва
-                                Европа Веноз Форуми(European Venous Forum) аъзоси.</p>
-                        </div>
-                        <div class="d-flex mt-auto border-top p-4">
-                            <a href="#appointment" style="color: #ffffff; background: #ff0000;"
-                               class="btn btn-outline-light rounded-pill py-md-3 px-md-5 mx-2">Мурожаат учун</a>
+                        <div class="col-12 col-sm-7 h-100 d-flex flex-column">
+                            <div class="mt-auto p-4">
+                                <h3 style="color: #ff0000;">{{ doctor.first_name }} {{ doctor.last_name }} {{ doctor.father_name }}</h3>
+                                <h6 style="color: #ff0000;" class="fw-normal mb-4">{{ doctor.profession }}</h6>
+                                <p class="m-0">{{ doctor.description }}</p>
+                            </div>
+                            <div class="d-flex mt-auto border-top p-4">
+                                <a href="#appointment" style="color: #ffffff; background: #ff0000;"
+                                   class="btn btn-outline-light rounded-pill py-md-3 px-md-5 mx-2">Мурожаат учун</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            {% endfor %}
+
+
         </div>
     </div>
 </div>
